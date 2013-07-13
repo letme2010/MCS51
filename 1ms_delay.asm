@@ -1,0 +1,15 @@
+ORG	0020H
+
+MAIN:
+	
+DELAY_1_MS:
+	PUSH R0
+	MOV	R0,	#249
+	DELAY_LOOP_1:
+		NOP							;1
+		NOP							;1
+		DJNZ	R0,	DELAY_LOOP_1	;2
+	POP R0
+	RET
+	
+END
